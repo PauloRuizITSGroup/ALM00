@@ -1,0 +1,20 @@
+ID: ALM00
+_schema-version: '2.1'
+description: Projeto ALM
+version: 0.0.1
+
+modules:
+ - name: HANA
+   type: hdb
+   path: HANA
+   requires:
+    - name: hdi_HANA
+
+resources:
+ - name: hdi_HANA
+   parameters:
+      config:
+         schema: HANA
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
