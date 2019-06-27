@@ -15,6 +15,9 @@ resources:
    parameters:
       config:
          schema: HANA
+      service-name: ALM00-hdiHANA-S0020407867-workspacOSS/BIaZQAk6h5XE
+      service: hana
+      service-plan: hdi-shared
    properties:
-      hdi-container-name: ${service-name}
-   type: com.sap.xs.hdi-container
+      hdi-container-name: '${service-name}'
+   type: org.cloudfoundry.existing-service
